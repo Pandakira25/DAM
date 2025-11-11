@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+    int n;
+    int c=0;
+    int sum=0;
+
+    cout<<"Escribe un numero cualquiera"<<endl;
+    cin>>n;
+
+
+    while (c<=n) {
+    
+        sum +=c;
+        c++; //sumo uno a c
+
+    }
+
+    cout<<"La suma es:"<<sum<<endl;
+}
+

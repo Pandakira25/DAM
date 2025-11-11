@@ -1,0 +1,18 @@
+h1{
+    font-family: Arial;
+    font-size: 30px;
+    color: aquamarine;
+}
+h2{
+    font-family: Cambria;
+    font-size: 30px;
+    color: rgb(148, 199, 39);
+}
+h3{
+    font-family: sans-serif;
+    font-size: 30px;
+    color: rgb(151, 138, 212);
+}
+a{
+    color: rgb(198, 226, 155);
+}

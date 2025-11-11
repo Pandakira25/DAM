@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<head>
+    <title>Horario Escolar</title>
+</head>
+
+<body>
+    <table border="4" bordercolor="#67009C" cellspacing="10" cellpadding="15"><!--indico el ancho del borde, el color del borde, el espacio entre las celdas, y el margen interno de las celdas-->
+        <caption><i><font color="#67009C" size="6">Horario escolar</font></i></i><caption><!--indico el título de la tabla con su color y ancho seteandolo en cursiva-->
+
+        <thead>
+            <th bgcolor="#B1B2F0" align="center">
+                <i><font color="#555555" size="4">Hora</font></i>
+            </th>
+            <th bgcolor="#B1B2F0" align="center">
+                <i><font color="#555555" size="4">Lunes</font></i>
+            </th>
+            <th bgcolor="#B1B2F0" align="center">
+                <i><font color="#555555" size="4">Martes</font></i>
+            </th>
+            <th bgcolor="#B1B2F0" align="center">
+                <i><font color="#555555" size="4">Miércoles</font></i>
+            </th>
+            <th bgcolor="#B1B2F0" align="center">
+                <i><font color="#555555" size="4">Jueves</font></i>
+            </th>
+            <th bgcolor="#B1B2F0" align="center">
+                <i><font color="#555555" size="4">Viernes</font></i>
+            </th>
+        </thead>
+
+        <!--En el thead indico todos los datos que van a haber en las siguientes filas de las columnas y para que tengan de fondo un color uso bgcolor en el th, y para que la letra sea cursiva uso i en 
+        vez de p y para que tenga tambén color uso bgcolor, para el tamaño uso size y para que esten centrados align="center"-->
+
+        <tbody>
+            <tr>
+                <td bgcolor="#9C9EEC"  align="center">
+                    <i><font color="#3D3D3D" size="4">8:30 a 9:30</font></i>
+                </td>
+                <td rowspan="2" align="center" bgcolor="#D5FF66">
+                    <image src="imágenes/horario escolar/Entornos.gif" align="left" alt="Entornos de desarrllo"></image>
+                    <i><font size="4" color="#67009C" >Entornos de desarrollo</font></i>
+                </td>
+                <td rowspan="4" align="center" bgcolor="#FFADEC">
+                    <image src="imágenes/horario escolar/icons8-logotipo-de-java-coffee-cup.gif" align="center"  alt="Programación"></image>
+                    <i><font size="4" color="#67009C">Programación</font></i>
+                </td>
+                <td rowspan="3" align="center" bgcolor="#FFC2C2">
+                    <image src="imágenes/horario escolar/lenguaje.gif" align="left"  alt="Lenguaje de marcas"></image>
+                    <i><font size="4" color="#67009C">Lenguaje de marcas</font></i>
+                </td>
+                <td rowspan="2" align="center" bgcolor="#FAE3FF">
+                    <image src="imágenes/horario escolar/sistemas.png" align="left"  alt="Sistemas informáticos"></image>
+                    <i><font size="4" color="#67009C">Sistemas informáticos</font></i>
+                </td>
+                <td rowspan="3" align="center" bgcolor="#F0D4B1">
+                    <image src="imágenes/horario escolar/bases.png" align="left"  alt="Bases de datos"></image>
+                    <i><font size="4" color="#67009C">Bases de datos</font></i>
+                </td>
+            </tr>
+           
+            <tr>
+                <td bgcolor="#7678E5"  align="center">
+                    <i><font color="#252525" size="4">9:30 a 10:30</font></i>
+                </td>
+            </tr>
+            
+            <tr>
+                <td bgcolor="#4F52DE"  align="center">
+                    <i><font color="#B6B6B6" size="4">10:30 a 11:30</font></i>
+                </td>
+                <td rowspan="4" align="center" bgcolor="#FAE3FF">
+                    <image src="imágenes/horario escolar/sistemas.png" align="left"  alt="Sisemas informáticos"></image>
+                    <i><font size="4" color="#67009C">Sistemas informáticos</font></i>
+                </td>
+                <td rowspan="4" align="center" bgcolor="#FFADEC" >
+                    <image src="imágenes/horario escolar/icons8-logotipo-de-java-coffee-cup.gif" align="middle"  alt="Programación"></image>
+                    <i><font size="4" color="#67009C">Programación</font></i>
+                </td>
+            </tr>
+           
+            <tr>
+                <td bgcolor="#292CD6"  align="center">
+                    <i><font color="#CFCFCF" size="4">11:30 a 12:30</font></i>
+                </td>
+                <td rowspan="3" align="center" bgcolor="#F0D4B1">
+                    <image src="imágenes/horario escolar/bases.png" align="middle"  alt="Bases de datos"></image>
+                    <i><font size="4" color="#67009C">Bases de datos</font></i>
+                </td>
+                <td rowspan="3" align="center" bgcolor="#FAF5C8">
+                    <image src="imágenes/horario escolar/IPE.png" align="middle"  alt="IPE"></image>
+                    <i><font size="4" color="#67009C">IPE</font></i>
+                </td>
+                
+            </tr>
+           
+            <tr>
+                <td bgcolor="#2124B0"  align="center">
+                    <i><font color="#E7E7E7" size="4">12:30 a 13:30</font></i>
+                </td>
+                <td rowspan="2" align="center" bgcolor="#C2FAFF" >
+                    <image src="imágenes/horario escolar/robotica.png" align="middle"  alt="Robotica"></image>
+                    <i><font size="4" color="#67009C" >Robótica</font></i>
+                </td>
+            </tr>
+           
+            <tr>
+                <td bgcolor="#1A1C89"  align="center">
+                    <i><font color="#FFFFFF" size="4">13:30 a 14:30</font></i>
+                </td>
+            </tr>
+        </tbody>
+
+        <!--En las celdas que contienen las horas no hago nada muy distinto a en thead; en las celdas que contienen el nombre de la materia dentro del td con rowspan indico cuantas celdas quiero que ocupe, con bgcolor 
+        el color del fondo de  la celda, align para que este centrado y dentro i para que sea cursiva junto con font que dentro usa para color para el color de la letra y size para el tamaño
+        por la parte de la imagen para que aparezca uso la etiqueta image y dentro defino la fuente con src el texto alternativo acorde a cada materia y align para que este donde quiero que este, dependiendo del 
+        caso uso center, middle o left -->
+    </table>
+</body>
