@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejemplo cajas 2</title>
+        <style>
+            .caja{
+                left: 40px;
+                top: 20px;
+            }
+            .caja1{
+                left: 40px;
+                top: 100px;
+            }
+            .caja2{
+                left: 150px;
+                top: 250px;
+            }
+            .caja3{
+                left: 150px;
+                top: 270px;
+            }
+            div.caja {
+                position:absolute;
+                width: 200px;
+                height: 50px;
+                border: 10px solid #00ffaa;
+            }
+            div.caja1 {
+                position:absolute;
+                width: 200px;
+                height: 50px;
+                border: 10px groove #6031b6;
+            }
+            div.caja2 {
+                position:absolute;
+                width: 400px;
+                height: 150px;
+                border: 10px solid #b3ff00;
+            }
+            div.caja3 {
+                position:absolute;
+                width: 400px;
+                height: 150px;
+                border: 10px solid #ffa9cd;
+                text-align: center;
+                padding: 25px;
+                background-color: #ff5a75;
+            }
+            #caja2{
+                z-index: 10; /*numero de capa*/
+            }
+            #caja3{
+                z-index: 9;/*numero de capa si es mayor que el de otro elemento estará por encima de este*/
+            }
+            #caja{
+                overflow: hidden;/*El texto que no entre dentro de la caja lo va a ocultar*/
+                overflow: scroll;/*va a hacer que aparezca un scroll para navegar el texto dentro de la caja*/
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="caja" id="caja">Hola HolaHolaHolaHolaHolaHolaHolaHolaHolaHola
+            HolaHolaHolaHolaHolaHolaHolaHolaHolaHolaHolaHolaHolaHolaHolaHolaHola
+            HolaHolaHolaHolaHola
+            HolaHolaHolaHolaHolaHolaHolaHolaHolaHolaHolaHolaHolaHolaHolaHolaHola
+            HolaHolaHolaHolaHolaHolaHola
+        </div>
+        <div class="caja1">Hola1</div>
+        <div class="caja2"  id="caja2">Hola2</div>
+        <div class="caja3" id="caja3">Hola3</div>
+    </body>
+</html>

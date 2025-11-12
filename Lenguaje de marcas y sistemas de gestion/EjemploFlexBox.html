@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo FlexBox</title>
+        <style>
+            .contenedor-flex{
+                border: 5px solid;
+                display: flex;
+                /*flex-direction: row;
+                flex-wrap: wrap;*/
+                flex-flow: row wrap;
+                justify-content: space-around;
+                align-items: center;
+                height: 600px;
+            }
+            .contenedor-flex div {
+                background-color: aquamarine;
+                width: 60px;
+                margin: 10px;
+                padding: 20px;
+                font-size: 30px;
+                text-align: center;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="contenedor-flex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        </div>
+        <p>En primer lugar un diseño 'flex' debe tener un elemento contenedor (padre) con la propiedad <em>'display'</em> asignada en el valor <em>'flex'</em>.</p>
+        <p>Automaticamente los elementos contenidos se convierten en elementos flecibles</p>
+    </body>
+</html>
