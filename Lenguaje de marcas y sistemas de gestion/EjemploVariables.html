@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Ejemplo 3 Variables javaScript
+        </title>
+    </head>
+    <body>
+         <script>
+            //Ámbito de las variables
+            let nombre = "Zoe";
+            let vable1;
+
+            function cambiaNombre(){
+                //Se declara de nuevo la variable nombre, por lo tanto su ámbito es local a la función. Es diferentea la declarada fuera
+                let nombre = "Ana";
+                console.log("Valor variable "+ vable1);
+                console.log(nombre);
+            }
+
+            cambiaNombre();
+            console.log(nombre);
+
+            let otroNombre = "Otro carlos";
+            function cambiarOtroNombre(){
+                otroNombre = "Otra ana";
+                console.log(otroNombre);
+            }
+
+            cambiaNombre();
+            console.log(otroNombre);
+
+            //----------------------------------------------
+
+            if(true){
+                //El ámbito de la variable 'elNombre' es dentro del bloque 'if'
+                let elNombre = "De carlos";
+            }
+
+            //console.log(elNombre);
+
+            //Se puede declarar doblemente una variable con var por ende es menos seguro
+            var miNombre = "Pepe";
+            var miNombre = "Luis";
+
+            console.log(miNombre);
+
+            //No se puede declarar dos variables iguales con let
+            //let miNombre2 = "Pepe";
+            //let miNombre2 = "Luis";
+
+            //Palabra reservada 'const' para asignar valores constantes 
+            const diNombre = "Pepito"
+            console.log(diNombre);
+            //No se puede modificar el valor de una constante
+            //diNombre = "Pepito2";
+
+            //--------------
+
+            let texto1 = "hoy es";
+            let texto2 = "miércoles";
+            let numero1 = 3;
+            let concatenar = texto1 + " " +texto2;
+            console.log(concatenar);
+            let concatenar2 = texto1 + " " + texto2 +" "+ numero1 + " de diciembre.";
+            console.log(concatenar2);
+
+         </script>
+    </body>
+</html>
