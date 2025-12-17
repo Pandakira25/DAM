@@ -41,10 +41,27 @@ create or replace view p19 as select pe.codigo_pedido from pedido pe, detalle_pe
 
 create or replace view p20 as select pe.codigo_pedido from pedido pe where (select sum(dp.cantidad * dp.precio_unidad) from pedido p, detalle_pedido dp where p.codigo_pedido = dp.codigo_pedido and pe.codigo_pedido = p.codigo_pedido group by p.codigo_pedido) > (select avg(t.total) from (select p.codigo_pedido, sum(dp.cantidad * dp.precio_unidad) as total from pedido p, detalle_pedido dp where p.codigo_pedido = dp.codigo_pedido group by p.codigo_pedido) t);
 
-create or replace view p21 as select select 
+-- para concatenar los apellidos mejor usar concat()
+create or replace view p21 as select  e_subor.nombre as nombre_subor, 
+									  e_subor.apellido1 || ' ' || e_subor.apellido2 as apellidos_subor,
+									  o_subor.ciudad as ciudad_subor,
+									  e_jefe.nombre as nombre_jefe,
+									  e_jefe.apellido1 || ' ' || e_jefe.apellido2 as apellidos_jefe,
+									  o_jefe.ciudad as ciudad_jefe
+									 from empleado e_subor, empleado e_jefe, oficina o_subor, oficina o_jefe
+                                     where e_subor.codigo_jefe = e_jefe.codigo_empleado 
+                                     and o_subor.codigo_oficina = e_subor.codigo_oficina 
+                                     and e_jefe.codigo_oficina = o_jefe.codigo_oficina;
 
--- create or replace view p22 as select
+create or replace view p22 as select p.codigo_pedido, sum(dp.cantidad * dp.precio_unidad) as total
+									 from pedido p, detalle_pedido dp
+                                     where p.codigo_pedido = dp.codigo_pedido
+                                     group by p.codigo_pedido;
 
--- create or replace view p23 as select
+create or replace view p23 as select p.codigo_pedido, p.fecha_pedido, p.fecha_esperada, p.fecha_entrega, c.nombre_cliente, pg.total
+							  from pedido p, cliente c, pago pg
+                              where p.codigo_cliente = c.codigo_cliente 
+                              and pg.codigo_cliente = c.codigo_cliente
+                              order by pg.total desc;
 
--- create or replace view p24 as select
+create or replace view p24 as select t.gama, t.cantidad from(select p.gama, sum(dp.cantidad) as cantidad from detalle_pedido dp, producto p where p.codigo_producto = dp.codigo_producto group by p.gama order by cantidad desc) t  limit 1;
