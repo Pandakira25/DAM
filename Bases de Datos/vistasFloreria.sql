@@ -65,3 +65,9 @@ create or replace view p23 as select p.codigo_pedido, p.fecha_pedido, p.fecha_es
                               order by pg.total desc;
 
 create or replace view p24 as select t.gama, t.cantidad from(select p.gama, sum(dp.cantidad) as cantidad from detalle_pedido dp, producto p where p.codigo_producto = dp.codigo_producto group by p.gama order by cantidad desc) t  limit 1;
+
+
+-- examen 17/12/25
+create or replace view clientesMCod11o30 as select c.nombre_cliente, c.ciudad, c.codigo_empleado_rep_ventas, e.nombre from cliente c, empleado e  where c.ciudad like 'Madrid' and (c.codigo_empleado_rep_ventas = 11 or c.codigo_empleado_rep_ventas = 30) and c.codigo_empleado_rep_ventas = e.codigo_empleado;
+
+create or replace view gamaMenVen as select t.gama, t.cantidad from(select p.gama, sum(dp.cantidad) as cantidad from detalle_pedido dp, producto p where p.codigo_producto = dp.codigo_producto group by p.gama order by cantidad asc) t limit 1;
