@@ -7,9 +7,9 @@
 
     <body>
         <script>
-            let nombre = "Zoe";
-            let apellido = "Jastreb"; 
-            let edad = 20;
+            let nombre = prompt ('¿cuál es tu nombre?') ;
+            let apellido = prompt('¿cuál es tu apellido'); 
+            let edad = eval(prompt('¿cuál es tu edad?'));
 
             alert("Hola Mr " + apellido);
 
@@ -18,8 +18,14 @@
             document.write("<p>Tengo " + edad + " años, dentro de 5 tendré " + eval(edad + 5) + "</p>");
 
             //document.write si salta de línea
-            
 
+            //confirm es para aceptar o cancelar devuelve un booleano
+           if(confirm('Muchas Gracis, ¿Desea continuar?')){
+                alert('Esto es todo amigos!!');
+            }else{
+                alert('Se acabó!');
+            }
+            
         </script>
     </body>
 </html>
