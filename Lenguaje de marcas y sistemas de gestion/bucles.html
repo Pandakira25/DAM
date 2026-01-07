@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bucles JavaScript</title>
+</head>
+<body>
+    <script>
+        for(let i = 0; i < 10; i++){
+            document.write("Valor: " + i + "<br>");
+        }
+
+        let numero1 = 15;
+        let numero2 = 20;
+        while(numero2>numero1){
+            --numero2;
+            alert("El valor de número 2 (while) es: " + numero2);
+        }
+
+        numero1 = 15;
+        numero2 = 14;
+        do{
+            alert("el valor de número2 (do while) es: " + número2);
+        }while(numero2>numero1);
+
+        /* -------------------------------------------*/
+
+        //Arrays
+
+        let cars = ["Saab","Volvo","BMW"];
+        document.write(cars[1] + "<br>");
+        document.write("Longitud del Array: " + cars.length);
+
+        let coches = new Array("Saab","Volvo","BMW","Ford");
+        document.write(coches + "<br>");
+        for(let i = 0; i<coches.length; i++){
+            document.write("Posición " + i + " del array: " + coches[i] + "<br>");
+        };
+
+        Array[0] = "Ford";
+        Array[1] = "Seat";
+        Array[2] = "Renault";
+        Array[3] = "Saab";
+
+        document.write("Longitud: " + Array.length + "<br>");
+
+
+        let personas = {nombre:"Pepe", apellido:"Pérez",edad:33,colorOjos:"Azul"};
+        document.write(persona.colorOjos);
+
+        let x;
+        let text = "";
+        for(x in persona){
+            text += "<br>" + persona[x] + " "
+        }
+
+        document.write(text);
+
+        let numero;
+        let n1 = prompt("Dame 5 números separados por comas");
+        let arrayNumeros = n1.split(" ");
+
+        for(let i = 0; i < arrayNumeros.length; i++){
+            document.write(arrayNumeros[i]);
+            numero = parseInt(arrayNumeros[i]);
+            document.write(" -- Valor Entero " + numero + "<br>");
+
+        }
+        
+    </script>
+</body>
