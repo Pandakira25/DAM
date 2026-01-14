@@ -171,3 +171,87 @@ INSERT INTO pedido (id_pedido, id_cliente, id_vendedor, fecha_pedido, total, est
 select nombre, id_pedido, estado from cliente c, pedido p where c.id_cliente = p.id_cliente;
 
 select nombre, id_pedido, estado from cliente c join pedido p on c.id_cliente = p.id_cliente;
+
+
+-- Actividad 14/1/26
+-- INER JOIN
+-- ej1
+select c.nombre, c.ciudad, p.fecha_pedido from cliente c inner join pedido p on c.id_cliente = p.id_cliente
+where p.estado = 'PAGADO' order by p.fecha_pedido asc;
+
+-- ej 2 
+select c.nombre as nombre_cliente , v.nombre as nombre_vendedor from pedido p inner join cliente c on c.id_cliente = p.id_cliente 
+inner join vendedor v on v.id_vendedor = p.id_vendedor;
+
+-- ej3
+select v.nombre, p.* from pedido p inner join vendedor v on v.id_vendedor = p.id_vendedor 
+where total > 100 order by total asc;
+
+-- LEFT JOIN
+-- ej 1
+select c.nombre, p.id_pedido, p.estado, p.fecha_pedido from cliente c left join pedido p 
+on c.id_cliente = p.id_cliente order by c.nombre asc;
+
+-- ej2
+select v.nombre ,count(p.id_vendedor) as ventas from vendedor v left join pedido p on v.id_vendedor = p.id_vendedor 
+group by v.nombre; 
+
+-- ej3
+select c.nombre, p.id_pedido, p.estado from cliente c left join pedido p on p.id_cliente = c.id_cliente
+where p.estado like 'CANCELADO';
+
+-- RIGHT JOIN
+-- ej1
+select c.nombre, c.fecha_alta, p.estado from pedido p right join cliente c 
+on c.id_cliente = p.id_cliente order by c.nombre;
+
+-- ej2
+select v.nombre, v.id_vendedor, p.id_pedido from vendedor v right join pedido p 
+on p.id_vendedor = v.id_vendedor where v.nombre = 'Zoe';
+
+-- ej3
+select c.nombre, count(p.id_pedido) as pedidos from cliente c right join pedido p 
+on p.id_cliente = c.id_cliente where c.ciudad = 'Murcia' group by c.id_cliente;
+
+-- JOIN con más de dos tablas
+-- ej1
+select c.nombre, p.id_pedido, p.estado, v.nombre 
+from cliente c join pedido p on c.id_cliente = p.id_cliente
+join vendedor v on v.id_vendedor = p.id_vendedor
+order by p.id_pedido;
+
+-- ej2
+select v.nombre as nombre_vendedor, c.email, p.total from cliente c join pedido p on c.id_cliente = p.id_cliente
+join vendedor v on v.id_vendedor = p.id_vendedor;
+
+-- ej3
+select v.nombre as nombre_vendedor, c.nombre as nombre_cliente, c.ciudad, p.fecha_pedido
+from cliente c join pedido p on c.id_cliente = p.id_cliente 
+join vendedor v on v.id_vendedor = p.id_vendedor;
+
+-- Ejercicios adicionales
+-- ej1
+select c.nombre as nombre_cliente, p.id_pedido, p.estado 
+from cliente c right join pedido p on c.id_cliente = p.id_cliente;
+
+-- ej2
+select c.nombre as nombre_cliente, c.ciudad, p.fecha_pedido 
+from cliente c join pedido p on c.id_cliente = p.id_cliente;
+
+-- ej3
+select v.nombre as nombre_vendedor ,count(p.id_vendedor) as ventas from vendedor v left join pedido p on v.id_vendedor = p.id_vendedor 
+group by v.nombre;
+
+-- ej4
+select p.id_pedido, p.estado, c.nombre as nombre_cliente, v.nombre as nombre_vendedor 
+from cliente c join pedido p on c.id_cliente = p.id_cliente 
+join vendedor v on v.id_vendedor = p.id_vendedor;
+
+-- ej5
+select c.nombre as nombre_cliente, c.fecha_alta, p.estado from 
+cliente c right join pedido p on c.id_cliente = p.id_cliente order by c.nombre;
+
+-- ej6
+select c.nombre as nombre_cliente, v.nombre as nombre_vendedor, p.id_pedido
+from pedido p right join vendedor v on v.id_vendedor = p.id_vendedor
+left join cliente c on c.id_cliente = p.id_cliente;
