@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open Multiplica.html",
-            "file": "d:\\DAM\\Lenguaje de marcas y sistemas de gestion\\Multiplica.html"
+            "file": "d:\\DAM\\Lenguaje de marcas y sistemas de gestion\\EjemploObjetoString.html"
         }
     ]
 }

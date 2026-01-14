@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo 1 Objetos con JavaScript</title>
+    </head>
+    <body>
+        <script>
+            let car1 = -1 //El -1 significa que no existe
+            let car2 = -1
+
+            let correo
+            while(car1 == -1 ||car2 == -1){
+                correo = prompt("Introduzca su correo electrónico:")
+                car1 = correo.indexOf("@")
+                car2 = correo.indexOf(".")
+            }
+
+            document.write("Correo electrónico válido")
+            document.write("<br>Posición del caracter")
+            document.write("<br>Posición del caracter")
+        </script>
+    </body>
+</html>

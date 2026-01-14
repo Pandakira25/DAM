@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Eventos</title>
+        <script>
+            function Bienvenida(){
+                let c = prompt('Bienvenido a la Web, Ingrese la contraseña:')
+                while(c != 'pepe'){
+                    c = prompt('Contraseña incorrecta, ingresela de nuevo')
+                }
+            }
+            function acoso(){
+                alert('No Te Vayas Cara Mierda')
+            }
+
+            window.onload = Bienvenida(); //Puedo ponerlo así o como un onload como etiqueta en el body
+            //el window es para que se ejecute algo cuando se abre la página
+        </script>
+    </head>
+    <body>
+        <a href="https://github.com/Pandakira25?tab=repositories" onmouseover="acoso()">git</a>
+        <a href="https://chatgpt.com/" onmouseover="acoso()">noesis</a>
+    </body>
+</html>

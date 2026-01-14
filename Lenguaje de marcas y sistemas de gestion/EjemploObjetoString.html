@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo Objeto String 2</title>
+    </head>
+    <body>
+        <script>
+            let texto = prompt("Introduce un texto:")
+
+            document.write("Texto teclado: <h3>" + texto + "</h3>")
+
+            //Bucle para escribir el texto caracter a caracter, según su posición, y 
+            // el valor de su código ascii.
+            for(let i=0; i<texto.length; i++){
+                document.write("Caracter posición " + i + ": " + texto.charAt(i) + " -- ")
+                document.write("Valor ASCII " + texto.charCodeAt(i) + "<br>")
+            }
+
+            //Concatenar la frase con el tezto indicado como parámetro en el método concat
+            document.write("Texto Concatenado: " + texto.concat(" <b>TEXTO CONCATENADO</b> <br>"))
+
+            //Obtener un caracter del códico ASCII indicado
+            let valor = String.fromCharCode(85)
+            document.write("Caracter del valor ASCII 85: " + valor)
+
+
+        </script>
+    </body>
+</html>
