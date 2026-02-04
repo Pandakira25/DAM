@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo 1 BOM</title>
+        <script>
+            let nuevaVentana;
+            function crearNueva(){
+                nuevaVentana = window.open('abrecierra.html', 'height=400, with=800');
+            }
+
+            function cerrarNueva(){
+                nuevaVentana.close();
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Abrimos y cerramos ventanas</h1>
+        <form>
+            <input type="button" id="crear-ventana" value="Crear Nueva Ventana" onclick="crearNueva()">
+            <input type="button" id="cerrar-ventana" value="Cerrar Nueva Ventana" onclick="cerrarNueva()">
+            
+        </form>
+    </body>
+</html>

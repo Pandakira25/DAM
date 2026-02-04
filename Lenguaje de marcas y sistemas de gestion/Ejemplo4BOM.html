@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo 3 DOM</title>
+    </head>
+    <body>
+        <script>
+            //setInterval(funcióm,milisegundos) --> Establece la ejecucioón de una funcion cada
+            //                                      cierto tiempo, esoecificando en milisegundos.
+            //                                      en el segundo parámetro
+            function saludo(saludo,nombre){
+                alert(saludo + nombre );
+            }
+
+            function parar (){
+                clearInterval(timer);
+                alert('Intervalo finalizado');
+            }
+
+            //Establece la ejecución de la función saludar cada 3 segundos, se
+            //almacena el identificador devuelto por 'setInterval'
+            let timer = setInterval(saludo, 3000, 'Hola', 'carlos');
+
+            //A los 15 segundos se ejecuta la funcion 'parar', en la que se cancela
+            //el setInterval asociado al identificador almacenado en timer
+            setTimeout(parar,4000);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Función de exec</title>
+    </head>
+    <body>
+        <script>
+            //exec --> Busca coincidencias de un patrón/expresión regular en una cadena y devuelve el texto encontrado. Si no encuentra el patron devuelve null
+            //i --> Ignore Case (No distingue entre minúsculas y mayúsculas
+            //g --> Busca todas las coincidencias en lugar detenerse en la primera
+            //m --> Busca en múltiples líneas
+            //ideal en casos en los que se necesite validación inmediata
+
+            let cadena = 'abbddeAbh';
+            let miArray;
+            //Comprueba si el texto 'Hola' está al principio de la cadena
+            let ExpReg = /ab*/gi;
+            let completo = '';
+            //Busca todas las coincidencias de ab* (una 'a' y una o más 'b') en 'cadena'
+            //debvuelve un array con todas las coincidencias encontradas o null si no hay coincidencias
+            while((miArray = ExpReg.exec(cadena)) != null){
+                let msg = 'Se ha encontrado ' + miArray[0] + '. '; 
+                msg = msg + "La siguiente coincidencia comienza en buscarse en el índice " + ExpReg.lastIndex;
+                completo = completo + msg + '<br>';
+                alert(msg);
+            }
+            document.write(completo);
+        </script>
+    </body>
+</html>

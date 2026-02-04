@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo 1 BOM</title>
+       
+    </head>
+    <body>
+        <script type="text/javascript">
+            let nuevaVentana;
+            function miRuta(){
+                document.write('Ruta: ' + window.location.href + '<br><br><br><br>');
+            }
+
+            window.onload = miRuta();
+            ventanaNueva = window.open('abrecierra.html', "Nueva", 'widht=300, height=300, resizable=yes, self=yes')
+            confirm('Mover y cambiar de tamaño la ventana');
+            ventanaNueva.moveTo(300,300);
+            ventanaNueva.resizeTo(600,600);
+        
+        </script>
+        <h1>Abrimos y cerramos ventanas</h1>
+        <form>
+            <input type="button" value="Llevar a segundo plano" onclick="ventanaNueva.window.blur()">
+            <input type="button" value="Llevar a primer plano" onclick="ventanaNueva.window.focus()">
+            <input type="button" value="Recargar" onclick="location.reload()"> 
+
+        </form>
+        
+
+
+    </body>
+</html>

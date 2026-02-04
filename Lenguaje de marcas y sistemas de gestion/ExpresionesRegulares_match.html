@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Función de match</title>
+    </head>
+    <body>
+        <script>
+            //match --> Devuelve un array con todas las coincidencias de un patrón/expresión regular en una cadena. Si no encuentra el patrón devuelve null
+            //i --> Ignore Case (No distingue entre minúsculas y mayúsculas
+            //g --> Busca todas las coincidencias en lugar detenerse en la primera
+            //m --> Busca en múltiples líneas
+            //ideal en casos en los que se necesite validación inmediata
+
+            let cadena = 'ABCDEFGHIJOKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+            let miArray;
+            //Comprueba si el texto 'Hola' está al principio de la cadena
+            let ExpReg = /[A-E]/gi;
+            let completo = '';
+            //Busca todas las letras desde la A/a hasta la E/e en 'cadena'
+            //Devuelve un array con todas las coincidencias encontradas o null si no hay coincidencias
+            miArray = cadena.match(ExpReg);
+            alert(miArray);
+        </script>
+    </body>
+</html>

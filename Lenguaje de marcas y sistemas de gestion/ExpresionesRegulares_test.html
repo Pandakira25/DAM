@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Función de test</title>
+    </head>
+    <body>
+        <script>
+            //test --> Busca el patrón (Expresión regular) en una cadena y devuelve un true si lo encuentra
+            //ideal en casos en los que se necesite validación inmediata
+
+            let cadena = 'hola mundo';
+            //Comprueba si el texto 'Hola' está al principio de la cadena
+            let ExpReg = /^Hola/i;//la i es para el ignore case
+            let resultado = ExpReg.test(cadena);
+            alert(resultado);
+        </script>
+    </body>
+</html>
