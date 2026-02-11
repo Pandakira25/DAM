@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejemplo 2 DOM</title>
+        <script>
+            //getElementsByTagName(NombreEtiqueta) --> Obtiene todos los elementos de un documento HTML
+            //                                         que la etiqueta sea igual al parámetro
+            let parrafos = document.getElementsByTagName('p');
+            let primerParrafo = parrafos[0];
+            for(let i = 0; i < parrafos.length; i++){
+                let parrafo = parrafos[i];
+                parrafo.style.color = 'red';
+
+            }//Recorre todos los párrafos del documento y cambia el texto a color rojo
+
+            //getElementsByTagName(nombre) --> Busca todos los elementos con el atributo nombre iagual al parametro
+
+            //en css los atributos que
+        </script>
+    </head>
+    <body>
+        
+        <p name="prueba">Prueba</p>
+        <p name="Especial">Especial</p>
+    </body>
+</html>
