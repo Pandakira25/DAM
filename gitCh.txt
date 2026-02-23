@@ -1,0 +1,195 @@
+este es mi cheatsheet entero por si os parece util
+
+
+git config --global user.name "Nombre"
+
+git config --global user.email "email@example.com"
+
+git config --global core.editor "code --wait"   # editor por defecto
+
+git config --list                                # ver configuración
+
+
+git init                        # inicializar repo local
+
+git clone <url>                 # clonar repositorio remoto
+
+git clone <url> <carpeta>       # clonar en carpeta específica
+
+
+git status                      # estado del working tree
+
+git diff                        # cambios sin stagear
+
+git diff --staged               # cambios en staging
+
+git log                         # historial de commits
+
+git log --oneline --graph       # historial compacto con ramas
+
+git log -p                      # historial con diffs
+
+git show <commit>               # detalles de un commit
+
+
+git add <archivo>               # añadir archivo al staging
+
+git add .                       # añadir todo
+
+git add -p                      # añadir cambios por partes (interactivo)
+
+git commit -m "mensaje"         # commit con mensaje
+
+git commit -am "mensaje"        # add + commit (solo archivos tracked)
+
+git commit --amend              # modificar el último commit
+
+
+git branch                      # listar ramas locales
+
+git branch -a                   # listar todas (incluye remotas)
+
+git branch <nombre>             # crear rama
+
+git switch <rama>               # cambiar de rama
+
+git switch -c <rama>            # crear y cambiar de rama
+
+git branch -d <rama>            # borrar rama (seguro)
+
+git branch -D <rama>            # borrar rama (forzado)
+
+git merge <rama>                # fusionar rama en la actual
+
+git rebase <rama>               # rebase sobre otra rama
+
+
+git remote -v                           # listar remotos
+
+git remote add origin <url>             # añadir remoto
+
+git remote remove <nombre>              # eliminar remoto
+
+git fetch                               # descargar cambios sin integrar
+
+git pull                                # fetch + merge
+
+git pull --rebase                       # fetch + rebase
+
+git push origin <rama>                  # subir rama
+
+git push -u origin <rama>              # subir y establecer upstream
+
+git push --force-with-lease             # push forzado (seguro)
+
+
+git restore <archivo>           # descartar cambios en working tree
+
+git restore --staged <archivo>  # sacar del staging
+
+git revert <commit>             # revertir commit (crea uno nuevo)
+
+git reset --soft HEAD~1         # deshacer último commit (mantiene staged)
+
+git reset --mixed HEAD~1        # deshacer último commit (mantiene working)
+
+git reset --hard HEAD~1         # deshacer último commit (borra todo)
+
+git clean -fd                   # eliminar archivos no tracked
+
+
+git stash                       # guardar cambios temporalmente
+
+git stash push -m "mensaje"     # stash con nombre
+
+git stash list                  # ver stashes guardados
+
+git stash pop                   # aplicar último stash y borrarlo
+
+git stash apply stash@{n}       # aplicar stash sin borrarlo
+
+git stash drop stash@{n}        # eliminar stash
+
+git stash clear                 # eliminar todos los stashes
+
+
+git tag                         # listar tags
+
+git tag <nombre>                # crear tag ligero
+
+git tag -a <nombre> -m "msg"    # crear tag anotado
+
+git push origin <tag>           # subir tag
+
+git push origin --tags          # subir todos los tags
+
+git tag -d <nombre>             # borrar tag local
+
+
+git merge --abort               # cancelar merge con conflictos
+
+git rebase --abort
+
+git rebase --continue           # continuar tras resolver conflictos
+
+git checkout --ours <archivo>   # quedarse con la versión propia
+
+git checkout --theirs <archivo> # quedarse con la versión entrante
+
+DESHACER CAMBIOS — según el estado
+
+
+En Working Directory (aún no hiciste git add):  el fichero esta en estado MODIFIED (hice algún cambio en el fichero, pero no hice git add todavía)
+
+git checkout -- <fichero>    # deshace cambios en un fichero
+
+git checkout -- .            # deshace todos los cambios
+
+
+
+En Staging Area (ya hiciste git add pero no commit):
+
+git reset HEAD <fichero>     # saca el fichero del staging (no borra cambios)
+
+git reset HEAD               # saca todos los ficheros del staging
+
+
+
+Ya hiciste commit:
+
+git revert <hash>            # crea un nuevo commit que deshace el anterior (seguro)
+
+git reset --hard HEAD~1      # elimina el último commit y los cambios (peligroso)
+
+git reset --soft HEAD~1      # elimina el último commit pero mantiene los cambios en staging
+
+
+��� MODIFICAR UN COMMIT
+
+git commit --amend -m "nuevo mensaje"    # cambia el mensaje del último commit
+
+git commit --amend                       # añade cambios al último commit (abre vi)
+
+⚠️ Solo usar --amend si el commit no ha sido pusheado al remoto.
+
+
+��� COMPARAR DIFERENCIAS
+
+git diff                          # cambios en working directory (sin git add aún)
+
+git diff --staged                 # cambios en staging area (después de git add)
+
+git diff <rama1> <rama2>          # diferencias entre dos ramas
+
+git diff <hash1> <hash2>          # diferencias entre dos commits
+
+git show <hash>                   # muestra los cambios de un commit concreto
+
+
+��� VER HISTORIAL
+
+git log                           # historial completo
+
+git log --oneline                 # historial resumido
+
+git log --all --graph --oneline --decorate   # el que usamos (lagod)
