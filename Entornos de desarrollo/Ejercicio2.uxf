@@ -1,0 +1,40 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>270</x><y>180</y><w>210</w><h>190</h></coordinates><panel_attributes>Aplicación
+--
+- Empresa []
+- Empleado []
+- Cliente []
+--
++ MostrarDatosC
++ MostrarDatosE</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>140</x><y>460</y><w>210</w><h>120</h></coordinates><panel_attributes>Empresa
+--
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>450</x><y>460</y><w>210</w><h>190</h></coordinates><panel_attributes>Empleado
+--
+- SueldoBruto: Double
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>720</x><y>460</y><w>210</w><h>190</h></coordinates><panel_attributes>Clientes
+--
+- NumTel: Int
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>770</x><y>700</y><w>210</w><h>90</h></coordinates><panel_attributes>Subordinado
+--
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>700</y><w>210</w><h>80</h></coordinates><panel_attributes>Directivo
+--
+- Categoria: String
+- Subordinado []
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>750</y><w>150</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;130;40</additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>190</y><w>210</w><h>190</h></coordinates><panel_attributes>Usuario
+--
+- Nombre: String
+- Edad: Int
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>550</y><w>130</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;110;10</additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>360</y><w>140</w><h>120</h></coordinates><panel_attributes>lt=-
+m1=1
+m2= n
+&lt; gestiona</panel_attributes><additional_attributes>100;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>290</y><w>190</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2= n
+gestiona &gt;</panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>370</y><w>120</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>100;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>770</x><y>370</y><w>70</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;50;90</additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>640</y><w>100</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>80;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>640</y><w>300</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;60;40;280;60</additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>570</y><w>830</w><h>280</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;260;810;260;810;30;700;30</additional_attributes></element></diagram>
